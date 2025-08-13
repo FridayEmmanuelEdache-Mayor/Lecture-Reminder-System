@@ -1,0 +1,69 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .notification-bar {
+            background-color: #1e40af; /* Deep blue */
+            color: white;
+            padding: 0.75rem;
+            text-align: center;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .notification-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-200%, 0); }
+        }
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-top: 80px; /* Adjust for fixed notification bar */
+        }
+        .lecture-card {
+            background-color: white;
+            border-left: 5px solid #3b82f6; /* Blue accent */
+            transition: all 0.3s ease;
+        }
+        .lecture-card.today {
+            background-color: #eff6ff; /* Light blue for today */
+            border-left-color: #1d4ed8; /* Darker blue for today */
+        }
+        .countdown {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .day-group h2 {
+            border-bottom: 2px solid #d1d5db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
